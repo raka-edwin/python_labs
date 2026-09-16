@@ -1,5 +1,5 @@
-a=float(input())
-b=float(input())
+a=float(input("Число 1: "))
+b=float(input("Число 1: "))
 print("a:",a)
 print("b:",b)
 print("sum="+str(int((100*(a+b)))/100)+";","avg="+str(int((a+b)*50)/100))

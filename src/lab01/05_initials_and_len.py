@@ -1,4 +1,4 @@
-fio=input()
+fio=input("ФИО: ")
 initials=""
 for i in range(len(fio)-1):
     if fio[i] in "ЁЙЦУКЕНГШЩЗХЪЖЭДЛОРПАВЫФЯЧСМИТЬБЮ":
