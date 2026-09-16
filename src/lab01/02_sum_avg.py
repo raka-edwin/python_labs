@@ -1,5 +1,3 @@
-a=float(input("Число 1: "))
-b=float(input("Число 1: "))
-print("a:",a)
-print("b:",b)
+a=float(input("a: "))
+b=float(input("b: "))
 print("sum="+str(int((100*(a+b)))/100)+";","avg="+str(int((a+b)*50)/100))
