@@ -1,3 +1,5 @@
-name="Никита"
-возраст=18
-print("Привет, "+ str(name)+ "! Через год тебе будет "+str((возраст+1)))
+name= input()
+age = int(input())
+print("Имя:",name)
+print("Возраст:",age)
+print("Привет, "+ str(name)+ "! Через год тебе будет "+str((age+1)))

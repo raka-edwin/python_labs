@@ -1,7 +1,8 @@
-fio=" Борбатенко Никита Янович"
+fio=input()
 initials=""
 for i in range(len(fio)-1):
-    if fio[i]==" ":
-        initials+=fio[i+1]
-print(initials + ".")
-print(len(fio)-1)
+    if fio[i] in "ЁЙЦУКЕНГШЩЗХЪЖЭДЛОРПАВЫФЯЧСМИТЬБЮ":
+        initials+=fio[i]
+print("ФИО:", fio)
+print("Инициалы:",initials + ".")
+print("Длина (символов):",len(fio)-fio.count(" ")+2)

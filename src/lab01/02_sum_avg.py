@@ -1,3 +1,5 @@
-a=6.7
-b=4.2
-print("sum="+str(a+b)+";","avg="+str(int((a+b)*50)/100))
+a=float(input())
+b=float(input())
+print("a:",a)
+print("b:",b)
+print("sum="+str(int((100*(a+b)))/100)+";","avg="+str(int((a+b)*50)/100))
