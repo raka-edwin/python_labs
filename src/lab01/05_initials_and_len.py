@@ -1,7 +1,6 @@
 fio=input("ФИО: ")
 initials=""
-for i in range(len(fio)-1):
-    if fio[i] in "ЁЙЦУКЕНГШЩЗХЪЖЭДЛОРПАВЫФЯЧСМИТЬБЮ":
-        initials+=fio[i]
-print("Инициалы:",initials + ".")
+a=fio.split()
+print("Инициалы:",a[0][0].upper()+a[1][0].upper()+a[2][0].upper()+ ".")
 print("Длина (символов):",len(fio)-fio.count(" ")+2)
+#запуск     py .\src\lab01\05_initials_and_len.py

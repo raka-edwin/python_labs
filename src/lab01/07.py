@@ -1,5 +1,4 @@
-inp="thisisabracadabraItww1 qewwwajodawwjjnww12twwjh plkjmqqqqaqqqqrqqqqkqqqq kmbg5kvay bztgpyhazlhdyxskopl."
-#I want mark 5 pls.
+inp=input("In: ")
 og=""
 m1=0
 m2=0
@@ -13,5 +12,5 @@ for i in range(0,len(inp)):
                 p=1
                 for k in range(m1,len(inp),(m2-m1+1)):
                     og+=inp[k]
-print(og)
-
+print("Out:",og)
+#запуск     py .\src\lab01\07.py
