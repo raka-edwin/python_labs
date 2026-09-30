@@ -29,10 +29,10 @@ def format_record(info):
 
         if len(name[a])==0 or len(group[a])==0 or name[a][0]\
           not in ("ЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮQWERTYUIOPASDFGHJKLZXCVBNM"):
-            answer.append((str(info[a])," → ",TypeError))
+            answer.append((str(info[a])," → ","TypeError"))
 
         if gpa[a]<0 or gpa[a]>5 or len(name[a].split())<2 or len(name[a].split())>3:
-            answer.append((str(info[a])," → ",ValueError))
+            answer.append((str(info[a])," → ","ValueError"))
 
         if len(name[a])!=0 and len(group[a])!=0 and 0<=gpa[a]<=5 and\
          len(name[a].split())>=2 and name[a][0] in ("ЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮQWERTYUIOPASDFGHJKLZXCVBNM"):
@@ -40,9 +40,16 @@ def format_record(info):
     return answer
 info=[("Иванов Иван Иванович", "BIVT-25", 4.6),("Петров Пётр", "IKBO-12", 5.0),\
       ("Петров Пётр Петрович", "IKBO-12", 5.0),("  сидорова  анна   сергеевна ", "ABB-01", 3.999)]
+info_test=[("Петоров", "BIVT-25", 3.5),("Петоров Пётр", "BIVT-25", 6.7),("Петоров Пётр", "", 4.7)]
 result=(format_record(info))
+result1=(format_record(info_test))
+
 for x in range(len(result)):
     print("".join(result[x]))
-#    for y in range(len(result[x])):
-#        print(str(result[x][y]))
+
+print(" ")
+print("доп тест-кейсы:")
+
+for x in range(len(result1)):
+    print("".join(result1[x]))
 #запуск      py .\src\lab02\tuples.py
