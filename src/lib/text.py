@@ -59,6 +59,10 @@ def tokenize(a):
     b=[]
     for i in range(len(a)):
         b.append(re.split(r'[^a-zA-Z0-9а-яА-Я-]+',a[i]))
+    for x in range(len(b)):
+        for y in range(len(b[x])):
+            if len(b[x][y])==0:
+                b[x].pop(y)
     return b
 
 def count_freq(a):
