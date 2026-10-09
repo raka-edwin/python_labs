@@ -3,7 +3,10 @@ def min_max(a):
         for i in range(len(a)-1):
             if a[i]>a[i+1]:
                 a[i],a[i+1]=a[i+1],a[i]
-    return a[0],a[-1]
+    if len(a)>0:
+        return a[0],a[-1]
+    else:
+        return ValueError
 
 def unique_sorted(b):
     b=list(set(b))
@@ -32,10 +35,7 @@ c=[[[1,2],[3,4]],[[1,2],(3,4,5)],[[1],[], [2,3]],[[1,2],"ab"]]
 
 print("min_max")
 for i in range(0,len(a)):
-    if len(a[i])>0:
-        print(a[i]," → ",min_max(a[i]))
-    else:
-        print(a[i]," → ",ValueError)
+    print(a[i]," → ",min_max(a[i]))
 print(" ")
 print("unique_sorted")
 for i in range(0,len(b)):
