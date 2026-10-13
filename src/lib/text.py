@@ -1,19 +1,4 @@
 import re
-def min_max(a):
-    for t in range(len(a)):
-        for i in range(len(a)-1):
-            if a[i]>a[i+1]:
-                a[i],a[i+1]=a[i+1],a[i]
-    return a[0],a[-1]
-
-def unique_sorted(b):
-    b=list(set(b))
-    for t in range(len(b)):
-            for i in range(len(b)-1):
-                if b[i]>b[i+1]:
-                    b[i],b[i+1]=b[i+1],b[i]
-    return b
-
 def flatten(a):
     b=[]
     u=0
@@ -26,26 +11,7 @@ def flatten(a):
         return b
     else:
         return TypeError
-
-def transpose(mat):
-    if len(mat)==0:
-        return []
-    else:
-        m=len(mat)
-        n=len(mat[0])
-        mat2=[[0 for i in range(m)]for i in range(n)]
-        for x in range(0,m):
-            for y in range(0,n):
-                mat2[y][x]=mat[x][y]
-        return mat2
-
-def row_sums(mat):
-    m=len(mat)
-    matrix_row_sum=[[]for i in range(m)]
-    for i in range(0,m):
-        matrix_row_sum[i].append(sum(mat[i]))
-    return matrix_row_sum
-
+    
 def normalize(a):
     b=[]
     for i in range(len(a)):
@@ -72,7 +38,7 @@ def count_freq(a):
         freq[i].append(list(b)[i])
         freq[i].append(a.count(list(b)[i]))
     freq.sort()
-    return freq
+    return dict(freq)
 
 def alf_ord(a):
     num_of_nums=[]
@@ -89,9 +55,9 @@ def alf_ord(a):
         b[i].sort()
     return flatten(b)
 
-def top_n(a):
+def top_n(a,n):
     b=[[0,0]for i in range(len(a))]
     for i in range(len(a)):
         b[i][0],b[i][1]=a[i][1],a[i][0]
     b.sort(reverse=True)
-    return alf_ord(b)
+    return alf_ord(b)[0:n]

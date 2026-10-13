@@ -36,10 +36,12 @@ c=[[[1,2],[3,4]],[[1,2],(3,4,5)],[[1],[], [2,3]],[[1,2],"ab"]]
 print("min_max")
 for i in range(0,len(a)):
     print(a[i]," → ",min_max(a[i]))
+
 print(" ")
 print("unique_sorted")
 for i in range(0,len(b)):
     print(b[i]," → ",unique_sorted(b[i]))
+    
 print(" ")
 print("flatten")
 for i in range(0,len(c)):
