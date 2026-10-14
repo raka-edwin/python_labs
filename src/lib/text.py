@@ -13,23 +13,26 @@ def flatten(a):
         return TypeError
     
 def normalize(a):
-    b=[]
-    for i in range(len(a)):
-        b.append(a[i].replace("\n"," ").replace("\t"," ").replace("\r"," ").casefold().replace("ё","е").strip())
-        k=b[i].count(" ")
-        prob=" "*k
-        b[i]=b[i].replace(prob," ")
-    return b
+    b=""
+    b=(a.replace("\n"," ").replace("\t"," ").replace("\r"," ").casefold().replace("ё","е").strip())
+    c=""
+    for i in range(len(b)-1):
+        if b[i]==" " and b[i+1]==" ":
+            pass
+        else:
+            c+=b[i]
+    return c+b[-1]
 
 def tokenize(a):
     b=[]
-    for i in range(len(a)):
-        b.append(re.split(r'[^a-zA-Z0-9а-яА-Я-]+',a[i]))
+    c=[]
+    b=(re.split(r'[^a-zA-Z0-9а-яА-Я-]+',a))
     for x in range(len(b)):
-        for y in range(len(b[x])):
-            if len(b[x][y])==0:
-                b[x].pop(y)
-    return b
+        if len(b[x])==0:
+            pass
+        else:
+            c.append(b[x])
+    return c
 
 def count_freq(a):
     b=set(a)
@@ -43,21 +46,19 @@ def count_freq(a):
 def alf_ord(a):
     num_of_nums=[]
     for i in range(len(a)):
-        num_of_nums.append(a[i][0])
+        num_of_nums.append(a[i][1])
     num_of_nums=list(set(num_of_nums))
     num_of_nums.reverse()
     b=[[]for x in range(len(num_of_nums))]
     for x in range(0,len(num_of_nums)):
         for y in range(0,len(a)):
-            if int(a[y][0])==int(num_of_nums[x]):
+            if (a[y][1])==(num_of_nums[x]):
                 b[x].append(a[y])
     for i in range(len(b)):
-        b[i].sort()
+        flatten(b[i])
     return flatten(b)
 
 def top_n(a,n):
-    b=[[0,0]for i in range(len(a))]
-    for i in range(len(a)):
-        b[i][0],b[i][1]=a[i][1],a[i][0]
-    b.sort(reverse=True)
-    return alf_ord(b)[0:n]
+    c=list(dict.items(a))
+    e=sorted(c, key=lambda x: x[1], reverse=True)
+    return alf_ord(e[0:n])
