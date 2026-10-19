@@ -26,7 +26,7 @@ def normalize(a):
 def tokenize(a):
     b=[]
     c=[]
-    b=(re.split(r'[^a-zA-Z0-9а-яА-Я-]+',a))
+    b=(re.split(r'[^a-zA-Z0-9а-яА-Я-_]+',a))
     for x in range(len(b)):
         if len(b[x])==0:
             pass
@@ -55,6 +55,7 @@ def alf_ord(a):
             if (a[y][1])==(num_of_nums[x]):
                 b[x].append(a[y])
     for i in range(len(b)):
+        b[i].sort()
         flatten(b[i])
     return flatten(b)
 
@@ -62,3 +63,4 @@ def top_n(a,n):
     c=list(dict.items(a))
     e=sorted(c, key=lambda x: x[1], reverse=True)
     return alf_ord(e[0:n])
+

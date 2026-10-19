@@ -11,8 +11,16 @@ print("Топ-5: ")
 print("слово"+" "*(k-len("слово"))+"|"*(math.ceil(k/1000))+" частота")
 if k>0:
     print("-"*k*2)
-for i in range(len(set(tokenize(normalize(a))))):
-    print(top_n(count_freq(tokenize(normalize(a))),5)[i][0]+" "*(k-len(top_n(count_freq(tokenize(normalize(a))),5)[i][0]))+\
-          "|"*(math.ceil(k/1000))+" "+str(top_n(count_freq(tokenize(normalize(a))),5)[i][1]))
-#запуск       Привет, мир! Привет!!!  | python -m src.lab03.text_stats
+a1=top_n(count_freq(tokenize(normalize(a))),5)
+#for i in range(len(set(tokenize(normalize(a))))):
+    #if len(count_freq(tokenize(normalize(a))))>=i:
+        #print(top_n(count_freq(tokenize(normalize(a))),5)[i][0]+" "*(k-len(top_n(count_freq(tokenize(normalize(a))),5)[i][0]))+\
+          #"|"*(math.ceil(k/1000))+" "+str(top_n(count_freq(tokenize(normalize(a))),5)[i][1]))
+if len(a1)<5:
+    for i in range(len(a1)):
+        print(a1[i][0]+" "*(k-len(a1[i][0]))+"|"*(math.ceil(k/1000))+" "+str(a1[i][1]))
+else:
+    for i in range(5):
+        print(a1[i][0]+" "*(k-len(a1[i][0]))+"|"*(math.ceil(k/1000))+" "+str(a1[i][1]))
 
+#запуск       Привет, мир! Привет!!!  | python -m src.lab03.text_stats
