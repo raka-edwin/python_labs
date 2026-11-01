@@ -23,7 +23,7 @@ write_csv(ready_text("data/lab04/empty.txt"),"data/lab04/empty.csv",("word","cou
 
 write_csv([(read_text("data/lab04/input1.txt")).encode("cp1251")],"data/lab04/encoding.csv",("word","count"))
 
-files_in=["data/lab04/a.txt","data/lab04/b.txt"]
+files_in=["data/lab04/a.txt","data/lab04/b.txt","data/lab04/c.txt"]
 files_out=["data/lab04/report_per_file.cvs","data/lab04/report_total.cvs"]
 write_multiple_csvs(datasets=files_in, paths=files_out, headers=("word","count"))
 

@@ -41,5 +41,5 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
             ws.column_dimensions[alf[i]].width=max_len+2
     wb.save(xlsx_path)
 
-csv_to_xlsx("data/lab05/samples/cities.csv","data/lab05/out/cities.xlsx")
+#csv_to_xlsx("data/lab05/samples/cities.csv","data/lab05/out/cities.xlsx")
 #   python -m src.lab05.csv_to_xlsx

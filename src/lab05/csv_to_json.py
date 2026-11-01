@@ -56,7 +56,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
             json.dump(json_data, f, ensure_ascii=False, indent=2)
 
 # тесты:
-json_to_csv("data/lab05/samples/people.json","data/lab05/out/people.csv")
-csv_to_json("data/lab05/samples/cities.csv","data/lab05/out/cities.json")
+#json_to_csv("data/lab05/samples/people.json","data/lab05/out/people.csv")
+#csv_to_json("data/lab05/samples/cities.csv","data/lab05/out/cities.json")
 
 #      python -m src.lab05.csv_to_json
