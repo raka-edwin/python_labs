@@ -1,0 +1,12 @@
+list.index
+search,1000,list.index,0.011,мс
+search,10000,list.index,0.008,мс
+search,100000,list.index,0.012,мс
+linear_search
+search,1000,linear_search,0.030,мс
+search,10000,linear_search,0.017,мс
+search,100000,linear_search,0.018,мс
+binary_search
+search,1000,binary_search,0.005,мс,сортировка,0.000,с
+search,10000,binary_search,0.005,мс,сортировка,0.002,с
+search,100000,binary_search,0.006,мс,сортировка,0.028,с

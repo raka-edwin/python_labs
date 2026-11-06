@@ -1,0 +1,8 @@
+two_sum_brute
+two_sum,1000,two_sum_brute,0.042,мс
+two_sum,10000,two_sum_brute,0.298,мс
+two_sum,100000,two_sum_brute,0.445,мс
+two_sum_fast
+two_sum,1000,two_sum_fast,0.007,мс
+two_sum,10000,two_sum_fast,0.007,мс
+two_sum,100000,two_sum_fast,0.009,мс

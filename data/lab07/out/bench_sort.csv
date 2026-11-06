@@ -1,0 +1,15 @@
+sorted
+sort,1000,sorted,0.172,мс
+sort,10000,sorted,0.002,с,11.6x
+sort,10000,sorted,>60,с
+bubble_sort
+sort,1000,bubble_sort,0.142,с
+sort,10000,bubble_sort,16.186,с,114.0x
+sort,10000,bubble_sort,>60,с
+selection_sort
+sort,1000,selection_sort,0.031,с
+sort,10000,selection_sort,3.630,с,117.1x
+sort,10000,selection_sort,>60,с
+insertion_sort
+sort,1000,insertion_sort,0.076,с
+sort,10000,insertion_sort,>60,с

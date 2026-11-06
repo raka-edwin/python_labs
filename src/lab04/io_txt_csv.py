@@ -31,8 +31,8 @@ def write_csv(rows: list[tuple | list | str], path: str | Path,
         else:
             length=len(rows[0])
             for r in rows:
-                if len(r)!=length:
-                    raise ValueError
+#                if len(r)!=length:
+#                    raise ValueError
                 if header is not None and len(header)!=length:
                     raise ValueError
                 elif header is not None:
